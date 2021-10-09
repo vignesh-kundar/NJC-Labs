@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+
+    <style>
+        h1 {
+          display: table;
+          margin : 20px auto;
+        }
+        table {
+            margin-top: 50px;
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+
+        td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+        }
+
+        tr:nth-child(even) {
+        background-color: #dddddd;
+        }
+        footer {
+            display: table;
+            margin : 20px auto;
+            bottom :0;
+            position: relative;
+        }
+        .ftrhr {
+            position: relative;
+            top : 500px;
+        }
+        div a {
+            text-decoration: none;
+        }
+        div .ftr {
+            position: relative;
+            top : 510px;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    <h1>Movies DB</h1>
+    <hr>
+<div class="table">
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Movie</th>
+            <th>Release-Date</th>
+            <th>Actor</th>
+            <th>Actress</th>
+            <th>Director</th>
+        </tr>
+  <!-- id Year  Name Actor Actress Director -->
+ <% Items.forEach(element => {  %>
+
+    <tr>
+        <td> <%= element.id %> </td>
+        <td> <%= element.Name %></td>
+        <td> <%= element.Year %></td>
+        <td> <%= element.Actor %></td>
+        <td> <%= element.Actress %></td>
+        <td> <%= element.Director %></td>
+    </tr>
+
+  <% }) %>
+        
+
+</div>
+    </table>
+    
+   <hr class="ftrhr">     
+<footer>
+
+    <div class="ftr">
+      <a href="">vignesh-kundar</a>
+  
+
+    </div>
+
+</footer>
+ 
+
+</body>
+</html>
