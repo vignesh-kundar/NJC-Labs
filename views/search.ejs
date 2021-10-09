@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search DB</title>
+
+    <style>
+       h1{
+           display : table;
+           margin : 20px auto;
+       }
+
+       .frm {
+           margin-top : 20px;
+       }
+       table {
+            margin-top: 50px;
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+
+        td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+        }
+
+        tr:nth-child(even) {
+        background-color: #dddddd;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="search">
+       
+        <h1>Search DB</h1>
+        <hr>
+        <p>Search your query...</p>
+
+        <form action="/search" method="post">
+
+            <select name="searchD" id="searchD">
+                <option value="Id">ID</option>
+                <option value="Name">movie name</option>
+            </select>
+ 
+            <!-- <input type="text" name="searchD" placeholder="Query Eg : Movie"> -->
+            <input type="text" name="searchQ" placeholder="ID Eg : 3">
+            
+            <button type="submit">-></button>
+
+            <hr class="frm">
+        </form>
+    </div>
+
+    <div class="result">
+        <!-- <p>RESULT : <%= Data.Name %></p> -->
+
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Movie</th>
+                <th>Release-Date</th>
+                <th>Actor</th>
+                <th>Actress</th>
+                <th>Director</th>
+            </tr>
+      <!-- id Year  Name Actor Actress Director -->
+    
+    
+        <tr>
+            <td> <%= Data.Id %> </td>
+            <td> <%= Data.Name %></td>
+            <td> <%= Data.Year %></td>
+            <td> <%= Data.Actor %></td>
+            <td> <%= Data.Actress %></td>
+            <td> <%= Data.Director %></td>
+        </tr>
+    
+    
+    </table>   
+    </div>
+
+</body>
+</html>

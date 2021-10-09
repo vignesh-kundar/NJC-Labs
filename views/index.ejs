@@ -35,18 +35,16 @@
         }
         .ftrhr {
             position: relative;
-            top : 500px;
+            top : 50px;
         }
         div a {
             text-decoration: none;
         }
         div .ftr {
             position: relative;
-            top : 490px;
+            top : 50px;
         }
-        div .search {
-            margin-top : 20px;
-        }
+     
     </style>
 
 </head>
@@ -69,7 +67,7 @@
  <% Items.forEach(element => {  %>
 
     <tr>
-        <td> <%= element.id %> </td>
+        <td> <%= element.Id %> </td>
         <td> <%= element.Name %></td>
         <td> <%= element.Year %></td>
         <td> <%= element.Actor %></td>
@@ -78,26 +76,16 @@
     </tr>
 
   <% }) %>
-        
+</table>   
 
 </div>
-    </table>
+   
 
-    <div class="search">
-        <hr>
-        <h2>Search DB</h2>
-        <form action="/search">
- 
-            <input type="text" name="searchQ" placeholder="Search">
-            <button type="submit">-></button>
-
-        </form>
-
-    </div>
+   
     
-   <hr class="ftrhr">     
+      
 <footer>
-
+    <hr class="ftrhr">  
     <div class="ftr">
       <a href="https://www.linkedin.com/in/vignesh-kundar/">vignesh-kundar</a>
   
