@@ -33,16 +33,28 @@
             bottom :0;
             position: relative;
         }
-        .ftrhr {
-            position: relative;
-            top : 50px;
-        }
+      
         div a {
             text-decoration: none;
         }
-        div .ftr {
+        div.ftr {
             position: relative;
             top : 50px;
+        }
+        hr.table {
+            margin-top: 10px;
+        }
+        a.nav {
+            text-decoration: none;
+            background-color: #dddddd;
+            padding : 5px;
+            border-radius: 3px;
+            position : absolute;
+            right : 10px;
+            top : 23px;
+        }
+        .note{
+            margin-top :40px;
         }
      
     </style>
@@ -51,6 +63,8 @@
 
 <body>
     <h1>Movies DB</h1>
+
+    <a class="nav" href="/search">SEARCH DB</a>
     <hr>
 <div class="table">
 
@@ -79,18 +93,38 @@
 </table>   
 
 </div>
-   
+<p class="note">NOTE : if the table is not showing up restart server and refresh web page.. >__< </p>
 
+<hr class="table">
+   
+<div class="insert">
+
+<h3>INSERT INTO DB</h3>
+
+<form action="/" method="post">
+
+<p>ID : </p> <input type="text" name="Id" placeholder="ID Eg : 7">
+<p>Movie : </p> <input type="text" name="Name" placeholder="Name Eg : Parasite">
+<p>Release-Date : </p> <input type="text" name="Year" placeholder="Date : 2019" >
+<p>Actor : </p> <input type="text" name="Actor" placeholder="Actor : Kang-ho Song">
+<p>Actress : </p> <input type="text" name="Actress" placeholder="Actress : Yeo-jeong Cho">
+<p>Director : </p> <input type="text" name="Director" placeholder="Director : Bong Joon Ho">
+<button type="submit">Spam Here ! To update Table</button>
+</form>
+
+</div>
    
     
       
 <footer>
-    <hr class="ftrhr">  
-    <div class="ftr">
-      <a href="https://www.linkedin.com/in/vignesh-kundar/">vignesh-kundar</a>
-  
+    <div>
+    
+        <hr class="ftrhr">  
 
+        <a href="https://www.linkedin.com/in/vignesh-kundar/">vignesh-kundar</a>
+   
     </div>
+
 
 </footer>
  

@@ -47,6 +47,15 @@ VALUES (  1, 2019, 'Uri' , 'Vicky kaushal' , 'Yami gautham' , 'Aditya dhar' ) ,
 
 
 
+
+
+
+
+
+app.get("/" , (req,res) => {
+    
+
+    let db = new sqlite.Database('./Movies.db');
     let sql = `SELECT * FROM movies`;
     
     db.all( sql , [] ,(err , row) => {
@@ -62,17 +71,45 @@ VALUES (  1, 2019, 'Uri' , 'Vicky kaushal' , 'Yami gautham' , 'Aditya dhar' ) ,
             console.log(items);
             return items;
        })
-
-
-
-
-
-app.get("/" , (req,res) => {
-
-
+     
+    
        res.render("index", {Items :items , Data : data});
-       res.redirect('/');      
+       items=[];
+
+       res.redirect("/");   
+      
+       db.close();
+
+       res.redirect("/");  
 });
+
+
+app.post("/" ,(req,res) => {
+
+    let db = new sqlite.Database('./Movies.db');
+
+    var Temp = [
+        Id = req.body.Id,
+        Year = req.body.Year,
+        Name = _.capitalize(req.body.Name) ,
+        Actor = _.capitalize(req.body.Actor),
+        Actress = _.capitalize(req.body.Actress),
+        Director = _.capitalize(req.body.Director)
+    ];
+
+    console.log(Temp);
+
+    res.redirect("/");
+
+    db.run(`INSERT INTO movies VALUES(?, ?, ?, ?, ?, ?)` , Temp , (err) => {
+        if(err) {
+            return console.log(err);
+        }
+        console.log("Row added INTERSTELLER");
+    });
+
+db.close();
+})
 
 
 app.post("/search" , (req,res) => {
@@ -101,6 +138,8 @@ app.post("/search" , (req,res) => {
     }
 
     res.redirect("/search");
+
+    db.close();
 })
 
 app.get("/search" , (req,res) => {
