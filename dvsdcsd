@@ -1,0 +1,48 @@
+[33mcommit 57fa941e4eca7d8e0706eb037b1959d9aee3a5bc[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Merge: 4116690 c97277f
+Author: vignesh-kundar <vigneshkundar125@gmail.com>
+Date:   Sun Oct 10 02:38:20 2021 +0530
+
+    Merge branch 'main' of github.com:vignesh-kundar/NJC-Labs into main
+
+[33mcommit 4116690f53aac71f2cbdd77f5532c44c7f3fd351[m
+Author: vignesh-kundar <vigneshkundar125@gmail.com>
+Date:   Sun Oct 10 02:32:38 2021 +0530
+
+    OK Almost unless the redirecting bug..
+
+[33mcommit c97277f6c01a39a8c8f02823e150e73658dcea69[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: vignesh-kundar <76742715+vignesh-kundar@users.noreply.github.com>
+Date:   Sun Oct 10 02:31:58 2021 +0530
+
+    Delete hey.txt
+
+[33mcommit 12fd4a9e61ac5c3273435798e1552981d144c690[m
+Author: vignesh-kundar <76742715+vignesh-kundar@users.noreply.github.com>
+Date:   Sun Oct 10 02:31:34 2021 +0530
+
+    Delete ejs-working.txt
+
+[33mcommit 34a980546521c029fbe7d2938db063ce8a744b24[m
+Author: vignesh-kundar <vigneshkundar125@gmail.com>
+Date:   Sun Oct 10 02:08:35 2021 +0530
+
+    Everything working ...Meh! be !
+
+[33mcommit 056a77a07138317ed549fc9d2b48f6e37b2ce590[m
+Author: vignesh-kundar <vigneshkundar125@gmail.com>
+Date:   Sun Oct 10 00:27:09 2021 +0530
+
+    search db working
+
+[33mcommit 8875072eb0976d87c0bb1e3195581311990d936d[m
+Author: vignesh-kundar <vigneshkundar125@gmail.com>
+Date:   Sat Oct 9 18:53:40 2021 +0530
+
+    second commit changed html
+
+[33mcommit bee57e9f2167ee59adfcb013c304ba650d5b6690[m
+Author: vignesh-kundar <vigneshkundar125@gmail.com>
+Date:   Sat Oct 9 17:54:03 2021 +0530
+
+    initaial comit ejs and node js sqlite3 DB
