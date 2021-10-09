@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movies</title>
+    <title>Movies DB</title>
 
     <style>
         h1 {
@@ -42,9 +42,11 @@
         }
         div .ftr {
             position: relative;
-            top : 510px;
+            top : 490px;
         }
-        
+        div .search {
+            margin-top : 20px;
+        }
     </style>
 
 </head>
@@ -80,12 +82,24 @@
 
 </div>
     </table>
+
+    <div class="search">
+        <hr>
+        <h2>Search DB</h2>
+        <form action="/search">
+ 
+            <input type="text" name="searchQ" placeholder="Search">
+            <button type="submit">-></button>
+
+        </form>
+
+    </div>
     
    <hr class="ftrhr">     
 <footer>
 
     <div class="ftr">
-      <a href="">vignesh-kundar</a>
+      <a href="https://www.linkedin.com/in/vignesh-kundar/">vignesh-kundar</a>
   
 
     </div>
