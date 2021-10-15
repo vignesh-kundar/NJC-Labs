@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,47 +8,66 @@
     <title>Search DB</title>
 
     <style>
-       h1{
-           display : table;
-           margin : 20px auto;
-       }
-
-       .frm {
-           margin-top : 20px;
-       }
-       table {
+        h1 {
+            display: table;
+            margin: 20px auto;
+        }
+        
+        .frm {
+            margin-top: 20px;
+        }
+        
+        table {
             margin-top: 50px;
-          font-family: arial, sans-serif;
-          border-collapse: collapse;
-          width: 100%;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
         }
-
-        td, th {
-        border: 1px solid #dddddd;
-        text-align: left;
-        padding: 8px;
+        
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
         }
-
+        
         tr:nth-child(even) {
-        background-color: #dddddd;
+            background-color: #dddddd;
         }
+        
         a.nav {
             text-decoration: none;
             background-color: #dddddd;
-            padding : 5px;
+            padding: 5px;
             border-radius: 3px;
-            position : absolute;
-            right : 10px;
-            top : 23px;
+            position: absolute;
+            right: 10px;
+            top: 23px;
+            color: #000;
         }
-
+        
+        button {
+            margin: 10px;
+            padding: 5px;
+        }
+        
+        input {
+            height: 30px;
+            border-radius: 5px;
+        }
+        
+        #searchD {
+            height: 30px;
+            margin: 10px;
+        }
     </style>
 
 </head>
+
 <body>
-    
+
     <div class="search">
-       
+
         <h1>Search DB</h1>
         <a class="nav" href="/">HOME</a>
         <hr>
@@ -59,11 +79,11 @@
                 <option value="Id">ID</option>
                 <option value="Name">movie name</option>
             </select>
- 
+
             <!-- <input type="text" name="searchD" placeholder="Query Eg : Movie"> -->
             <input type="text" name="searchQ" placeholder="ID Eg : 3">
-            
-            <button type="submit">-></button>
+
+            <button type="submit">></button>
 
             <hr class="frm">
         </form>
@@ -81,21 +101,34 @@
                 <th>Actress</th>
                 <th>Director</th>
             </tr>
-      <!-- id Year  Name Actor Actress Director -->
-    
-    
-        <tr>
-            <td> <%= Data.Id %> </td>
-            <td> <%= Data.Name %></td>
-            <td> <%= Data.Year %></td>
-            <td> <%= Data.Actor %></td>
-            <td> <%= Data.Actress %></td>
-            <td> <%= Data.Director %></td>
-        </tr>
-    
-    
-    </table>   
+            <!-- id Year  Name Actor Actress Director -->
+
+
+            <tr>
+                <td>
+                    <%= Data.Id %>
+                </td>
+                <td>
+                    <%= Data.Name %>
+                </td>
+                <td>
+                    <%= Data.Year %>
+                </td>
+                <td>
+                    <%= Data.Actor %>
+                </td>
+                <td>
+                    <%= Data.Actress %>
+                </td>
+                <td>
+                    <%= Data.Director %>
+                </td>
+            </tr>
+
+
+        </table>
     </div>
 
 </body>
+
 </html>
