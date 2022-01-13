@@ -1,5 +1,5 @@
 # NJC-Labs
-Basic Insertion and Quering operation using NODE JS and SQLITE3 .
+Basic Insertion and Quering operation using NODE JS and npm package SQLITE3 .
 
 
 
