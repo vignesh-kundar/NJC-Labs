@@ -4,8 +4,6 @@ const bodyParser = require('body-parser');
 const ejs = require('ejs');
 const _ = require('lodash');
 
-
-
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
@@ -66,12 +64,18 @@ app.get("/", (req, res) => {
         return items;
     })
 
-    res.render("index", { Items: items, Data: data });
-    items = [];
+   
+ 
 
-    res.redirect("/");
+    
 
-    db.close();
+    db.close((err) => {
+    if (!err) {
+        console.log("Movie DB closed...");
+         res.render("index", { Items: items, Data: data });
+    }
+})
+       items = [];
 });
 
 
@@ -93,7 +97,7 @@ app.post("/", (req, res) => {
     console.log(Temp);
     console.log("================================");
 
-    res.redirect("/");
+    
 
     db.run(`INSERT INTO movies VALUES(?, ?, ?, ?, ?, ?)`, Temp, (err) => {
         if (err) {
@@ -101,7 +105,13 @@ app.post("/", (req, res) => {
         }
         console.log("Row added INTERSTELLER");
     });
-    db.close();
+    
+db.close((err) => {
+    if (!err) {
+        console.log("Movie DB closed...");
+        res.redirect("/");
+    }
+})
 
 })
 
@@ -141,9 +151,3 @@ app.get("/search", (req, res) => {
 app.listen(3000, (req, res) => {
     console.log("Server running...")
 })
-
-// db.close((err) => {
-//     if (!err) {
-//         console.log("Movie DB closed...");
-//     }
-// })
